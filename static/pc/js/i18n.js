@@ -150,7 +150,7 @@ var TRANSLATIONS = {
     "products.catAll": "全部",
     "products.catPlush": "毛绒玩具",
     "products.catDolls": "玩偶",
-    "products.catKids": "儿童用品",
+    "products.catKids": "儿童玩具",
     "products.catBaby": "婴儿用品",
     "products.catBabyTextiles": "婴儿纺织品",
     "products.catGifts": "礼品",
