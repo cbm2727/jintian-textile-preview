@@ -127,3 +127,12 @@ function success (content, action) {
         // },  function() {
     },action)
 }
+
+if (window.location.pathname.indexOf('contact.html') === -1) {
+    var contactBtn = document.createElement('a');
+    contactBtn.href = 'contact.html';
+    contactBtn.className = 'floating-contact-btn';
+    contactBtn.setAttribute('data-i18n', 'nav.contact');
+    contactBtn.textContent = 'Contact Us';
+    document.body.appendChild(contactBtn);
+}

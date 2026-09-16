@@ -19,3 +19,27 @@
 .lang-switch select:focus {
     border-color: #A32015;
 }
+
+.floating-contact-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: #A32015;
+    color: #ffffff;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+.floating-contact-btn:hover {
+    background: #841a11;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
