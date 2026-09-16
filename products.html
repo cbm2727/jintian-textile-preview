@@ -58,9 +58,8 @@
     <div class="container">
         <div class="screen clearFix">
             <ul class="category capital fl clearFix">
-                <li><a href="javascript:void(0)" class="active" data-cat="all" data-i18n="products.catAll">all</a></li>
-                                        <li>
-                            <a href="javascript:void(0)" data-cat="plush" data-i18n="products.catPlush">
+                <li>
+                            <a href="javascript:void(0)" class="active" data-cat="plush" data-i18n="products.catPlush">
                                 PLUSH TOYS                            </a>
                         </li>
                                             <li>
@@ -359,19 +358,24 @@
         });
     })
 
-    $('.category a').click(function () {
-        $('.category a').removeClass('active');
-        $(this).addClass('active');
-        var cat = $(this).data('cat');
+    function filterByCategory(cat) {
         var visible = 0;
         $('#productList > li').each(function () {
             var itemCat = $(this).find('a').data('item-cat');
-            var show = (cat === 'all' || cat === itemCat);
+            var show = (cat === itemCat);
             $(this).toggle(show);
             if (show) visible++;
         });
         $('#noResults').toggle(visible === 0);
+    }
+
+    $('.category a').click(function () {
+        $('.category a').removeClass('active');
+        $(this).addClass('active');
+        filterByCategory($(this).data('cat'));
     });
+
+    filterByCategory($('.category a.active').data('cat'));
 </script>
 </body>
 </html>
