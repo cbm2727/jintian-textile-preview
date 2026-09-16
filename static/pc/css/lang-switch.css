@@ -1,0 +1,21 @@
+.lang-switch {
+    height: 93px;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+.lang-switch select {
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background: #fff;
+    color: #333333;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+.lang-switch select:hover,
+.lang-switch select:focus {
+    border-color: #A32015;
+}
