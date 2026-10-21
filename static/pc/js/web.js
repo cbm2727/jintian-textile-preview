@@ -136,3 +136,8 @@ if (window.location.pathname.indexOf('contact.html') === -1) {
     contactBtn.textContent = 'Contact Us';
     document.body.appendChild(contactBtn);
 }
+
+$('.nav-toggle').on('click', function () {
+    var open = $('.header').toggleClass('nav-open').hasClass('nav-open');
+    $(this).attr('aria-expanded', open ? 'true' : 'false');
+});
