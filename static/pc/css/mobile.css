@@ -462,8 +462,8 @@
     .contact-body .map {
         margin-top: 24px;
     }
-    .contact-body .map iframe {
-        height: 320px;
+    .contact-body .map img {
+        width: 100%;
     }
     .fixer_logo {
         width: 56px;

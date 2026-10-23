@@ -18,13 +18,12 @@
 <script src="static/pc/js/swiper.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='static/pc/css/style.css'>
     <style>
-        /* map01 image was replaced with an interactive Google Map at the same size */
-        .contact-body .map iframe {
-            width: 100%;
-            height: 518px;
+        /* Static location map, about 2/3 of the original map area, aligned top-left */
+        .contact-body .map img {
+            width: 75%;
+            height: auto;
             display: block;
             margin-top: 10px;
-            border: 0;
         }
     </style>
 <link rel='stylesheet' type='text/css' href='static/pc/css/mobile.css'>
@@ -96,9 +95,7 @@
                             </div>
         </div>
         <div class="map">
-            <iframe
-                src="https://www.google.com/maps?q=36.0647593,120.4014353&z=17&output=embed"
-                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <img src="static/pc/images/contact/map-china.webp" width="1619" height="971" loading="lazy" alt="Map showing the location of Qingdao Jintian Textile Co., Ltd. in Qingdao, Shandong, China">
         </div>
         <div class="fixer_logo"></div>
     </div>
