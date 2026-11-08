@@ -126,7 +126,7 @@ a:hover{
     line-height: 30px;
 }
 .navbar {
-	width: 550px;
+	width: auto;
 }
 .navbar ul li {
 	float: left;

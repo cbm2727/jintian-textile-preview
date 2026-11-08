@@ -1,0 +1,86 @@
+/* FAQ page */
+.faq-body { margin: 40px 0 80px; }
+.faq-body .container { width: 1030px; max-width: 100%; box-sizing: border-box; }
+
+/* Catalog request box */
+.catalog-box {
+    background: #FBF4F3;
+    border-left: 5px solid #A32015;
+    padding: 28px 32px 22px;
+    margin-bottom: 44px;
+}
+.catalog-box h2 { font-size: 24px; font-weight: bold; color: #A32015; margin-bottom: 8px; }
+.catalog-text { font-size: 15px; line-height: 1.6; color: #3E3E3E; margin-bottom: 16px; }
+.catalog-row { display: flex; gap: 10px; max-width: 640px; }
+.catalog-row input[type=email] {
+    flex: 1; min-width: 0; height: 46px; box-sizing: border-box; padding: 0 14px; font-size: 15px;
+    border: 1px solid #CFCFCF; border-radius: 4px; background: #FFFFFF; color: #222222;
+}
+.catalog-row input[type=email]:focus { outline: none; border-color: #A32015; box-shadow: 0 0 0 2px rgba(163,32,21,.15); }
+.catalog-row button, .faq-cta-btn {
+    height: 46px; padding: 0 26px; border: 0; border-radius: 4px; cursor: pointer;
+    background: #A32015; color: #FFFFFF; font-size: 15px; font-weight: bold; white-space: nowrap;
+}
+.catalog-row button:hover, .faq-cta-btn:hover { background: #861A11; }
+.catalog-row button[disabled] { opacity: .6; cursor: default; }
+.catalog-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.catalog-consent { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; max-width: 640px;
+    font-size: 13px; line-height: 1.5; color: #5E5B5B; cursor: pointer; }
+.catalog-consent input { margin-top: 3px; flex: none; }
+.catalog-msg { min-height: 20px; margin-top: 6px; font-size: 13px; color: #B00022; }
+.catalog-reply { font-size: 13px; color: #707070; }
+.catalog-ok { font-size: 16px; font-weight: bold; color: #2E7D32; padding: 6px 0; }
+
+/* Question groups */
+.faq-group { margin-bottom: 36px; }
+.faq-group h2 {
+    display: inline-block; background: #707070; color: #FFFFFF;
+    font-size: 20px; font-weight: bold; padding: 6px 16px; margin-bottom: 12px;
+}
+.faq-item { border-bottom: 1px solid #E0E0E0; }
+.faq-item summary {
+    list-style: none; cursor: pointer; position: relative;
+    padding: 16px 40px 16px 0; font-size: 16px; font-weight: bold; color: #222222; line-height: 1.5;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: "+"; position: absolute; right: 8px; top: 12px;
+    font-size: 24px; font-weight: normal; color: #A32015; line-height: 1.2;
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item summary:hover { color: #A32015; }
+.faq-answer { padding: 0 40px 18px 0; font-size: 15px; line-height: 1.7; color: #585858; }
+.faq-answer ul { margin-top: 6px; }
+.faq-answer li { position: relative; padding-left: 16px; margin-top: 4px; }
+.faq-answer li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: #A32015; }
+.faq-answer strong { color: #3E3E3E; }
+
+/* Bottom contact box */
+.faq-cta { background: #F0F0F0; padding: 30px 32px; margin-top: 10px; text-align: center; }
+.faq-cta h2 { font-size: 22px; font-weight: bold; color: #222222; margin-bottom: 8px; }
+.faq-cta p { font-size: 15px; color: #5E5B5B; margin-bottom: 14px; }
+.faq-contacts { display: inline-block; text-align: left; margin-bottom: 18px; }
+.faq-contacts li { font-size: 15px; color: #3E3E3E; line-height: 2; }
+.faq-contacts li span { color: #A32015; margin-right: 10px; }
+.faq-contacts a { color: #3E3E3E; }
+.faq-contacts a:hover { color: #A32015; }
+.faq-cta-btn { display: inline-block; line-height: 46px; }
+
+/* Preview-only notice (shown only while no form endpoint is set) */
+.preview-note { position: fixed; left: 12px; bottom: 12px; z-index: 999; background: #222222; color: #FFFFFF;
+    font-size: 13px; padding: 8px 12px; border-radius: 4px; opacity: .9; }
+
+@media (max-width: 900px) {
+    .faq-body { margin: 24px 0 48px; }
+    .catalog-box { padding: 22px 18px 16px; margin-bottom: 32px; }
+    .catalog-box h2 { font-size: 20px; }
+    .catalog-row { flex-direction: column; }
+    .catalog-row input[type=email] { flex: none; width: 100%; }
+    .catalog-row button { width: 100%; }
+    .faq-group h2 { font-size: 17px; }
+    .faq-item summary { font-size: 15px; padding-right: 32px; }
+    .faq-answer { padding-right: 0; font-size: 14px; }
+    .faq-cta { padding: 24px 16px; }
+    .faq-cta h2 { font-size: 18px; }
+    .faq-cta-btn { display: block; }
+}
