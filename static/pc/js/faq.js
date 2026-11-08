@@ -1,19 +1,10 @@
 /* FAQ page: catalog request form.
- * Submissions go through FormSubmit (formsubmit.co): notification to may@, copy to fiona@,
- * plus an automatic confirmation to the customer in the language they are viewing. */
+ * Submissions go through FormSubmit (formsubmit.co): notification to may@, copy to fiona@.
+ * No auto-reply to the customer: FormSubmit's free plan inserts sponsor ads into its emails. */
 (function () {
     var FORM_ENDPOINT = "https://formsubmit.co/ajax/may@jintiantextile.com";
     var CC = "fiona@jintiantextile.com";
-    var CONTACT = "may@jintiantextile.com / fiona@jintiantextile.com";
 
-    var AUTOREPLY = {
-        en: "Thank you for your interest in Qingdao Jintian Textile Co., Ltd. We have received your catalog request and will send you our latest catalog within 24 hours. If you have any questions or special requirements, please contact us at " + CONTACT + ".",
-        zh: "感谢您关注青岛金田纺织有限公司。我们已收到您的产品目录请求,将在24小时内把最新产品目录发送给您。如有任何问题或特别要求,请联系 " + CONTACT + "。",
-        de: "Vielen Dank für Ihr Interesse an Qingdao Jintian Textile Co., Ltd. Wir haben Ihre Kataloganfrage erhalten und senden Ihnen unseren aktuellen Katalog innerhalb von 24 Stunden. Bei Fragen oder besonderen Anforderungen erreichen Sie uns unter " + CONTACT + ".",
-        fr: "Merci de l'intérêt que vous portez à Qingdao Jintian Textile Co., Ltd. Nous avons bien reçu votre demande de catalogue et vous enverrons notre dernier catalogue sous 24 heures. Pour toute question ou exigence particulière, contactez-nous à " + CONTACT + ".",
-        ja: "青島金田紡織有限公司にご関心をお寄せいただき、ありがとうございます。カタログのご請求を承りました。24時間以内に最新カタログをお送りいたします。ご質問や特別なご要望がございましたら、" + CONTACT + " までご連絡ください。",
-        es: "Gracias por su interés en Qingdao Jintian Textile Co., Ltd. Hemos recibido su solicitud de catálogo y le enviaremos nuestro catálogo más reciente en un plazo de 24 horas. Si tiene alguna pregunta o requisito especial, contáctenos en " + CONTACT + "."
-    };
     var LANG_NAME = { en: "English", zh: "Chinese 中文", de: "German", fr: "French", ja: "Japanese", es: "Spanish" };
 
     var form = document.getElementById("catalogForm");
@@ -78,8 +69,7 @@
                 "_cc": CC,
                 "_replyto": value,
                 "_template": "table",
-                "_captcha": "false",
-                "_autoresponse": AUTOREPLY[l] || AUTOREPLY.en
+                "_captcha": "false"
             })
         }).then(function (r) {
             return r.json().then(function (data) {
