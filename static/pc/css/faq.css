@@ -29,7 +29,10 @@
 .catalog-consent input { margin-top: 3px; flex: none; }
 .catalog-msg { min-height: 20px; margin-top: 6px; font-size: 13px; color: #B00022; }
 .catalog-reply { font-size: 13px; color: #707070; }
-.catalog-ok { font-size: 16px; font-weight: bold; color: #2E7D32; padding: 6px 0; }
+.catalog-ok { padding: 6px 0; }
+.catalog-ok p { font-size: 16px; font-weight: bold; color: #2E7D32; }
+.catalog-ok .catalog-ok-mail { margin-top: 8px; font-size: 15px; font-weight: normal; color: #3E3E3E; }
+.catalog-ok-mail a { color: #A32015; font-weight: bold; text-decoration: underline; }
 
 /* Question groups */
 .faq-group { margin-bottom: 36px; }
