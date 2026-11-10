@@ -1,11 +1,8 @@
 /* FAQ page: catalog request form.
- * Submissions go through FormSubmit (formsubmit.co): notification to may@, copy to fiona@.
- * No auto-reply to the customer: FormSubmit's free plan inserts sponsor ads into its emails. */
+ * Posts to /api/catalog (Vercel function, sends via Resend from catalog@chinocojintian.com):
+ * notification to may@ and fiona@, plus a short confirmation to the customer. */
 (function () {
-    var FORM_ENDPOINT = "https://formsubmit.co/ajax/may@jintiantextile.com";
-    var CC = "fiona@jintiantextile.com";
-
-    var LANG_NAME = { en: "English", zh: "Chinese 中文", de: "German", fr: "French", ja: "Japanese", es: "Spanish" };
+    var FORM_ENDPOINT = "/api/catalog";
 
     var form = document.getElementById("catalogForm");
     if (!form) return;
@@ -19,11 +16,6 @@
     function t(key) {
         var d = (window.TRANSLATIONS && TRANSLATIONS[lang()]) || {};
         return d[key] || (TRANSLATIONS.en && TRANSLATIONS.en[key]) || key;
-    }
-    function beijingTime() {
-        try {
-            return new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false }) + " (Beijing)";
-        } catch (e) { return new Date().toISOString(); }
     }
     function done() {
         form.hidden = true;
@@ -58,22 +50,11 @@
         btn.textContent = "…";
         fetch(FORM_ENDPOINT, {
             method: "POST",
-            headers: { "Content-Type": "application/json", "Accept": "application/json" },
-            body: JSON.stringify({
-                "email": value,
-                "Request": "Latest catalog",
-                "Language": LANG_NAME[l] || l,
-                "Page": location.href,
-                "Time": beijingTime(),
-                "_subject": "New catalog request – chinocojintian.com – " + value,
-                "_cc": CC,
-                "_replyto": value,
-                "_template": "table",
-                "_captcha": "false"
-            })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: value, language: l, page: location.href, company_website: "" })
         }).then(function (r) {
-            return r.json().then(function (data) {
-                if (!r.ok || !(data.success === true || data.success === "true")) {
+            return r.json().catch(function () { return {}; }).then(function (data) {
+                if (!r.ok || data.success !== true) {
                     throw new Error(data.message || r.status);
                 }
                 done();
