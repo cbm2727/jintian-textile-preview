@@ -493,3 +493,8 @@
     .about-intro .ai-h1 { font-size: 18px; line-height: 26px; }
     .about-intro .ai-links a { display: inline-block; margin: 0 24px 8px 0; }
 }
+
+@media screen and (max-width: 900px) {
+    .home-body { padding-bottom: 60px; }
+    .home-about { margin-bottom: 20px; }
+}

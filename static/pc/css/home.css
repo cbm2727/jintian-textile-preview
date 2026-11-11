@@ -246,3 +246,22 @@
     .home-about .about-intro { width: auto; max-width: 615px; }
     .home-about .adsense { flex: 0 0 100%; }
 }
+
+/* crocodile strip: let the theme background show through the white photo background */
+.home-about .adsense img { mix-blend-mode: multiply; }
+
+/* Chinese / Japanese: use the site's sans font instead of the Latin serif */
+html[lang="zh"] .about-intro .ai-name,
+html[lang="zh"] .about-intro .ai-since span,
+html[lang="zh"] .about-intro .ai-text,
+html[lang="zh"] .about-intro .ai-links a,
+html[lang="zh"] .about-intro .ai-links a span,
+html[lang="ja"] .about-intro .ai-name,
+html[lang="ja"] .about-intro .ai-since span,
+html[lang="ja"] .about-intro .ai-text,
+html[lang="ja"] .about-intro .ai-links a,
+html[lang="ja"] .about-intro .ai-links a span {
+    font-family: 'PingFang SC', 'Hiragino Sans', 'Microsoft YaHei', sans-serif;
+}
+html[lang="zh"] .about-intro .ai-text,
+html[lang="ja"] .about-intro .ai-text { font-size: 15px; line-height: 26px; }
