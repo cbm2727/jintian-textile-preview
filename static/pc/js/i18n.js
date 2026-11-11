@@ -9,7 +9,7 @@ var TRANSLATIONS = {
     "footer.products": "Products",
     "footer.exhibitions": "Exhibitions",
     "footer.contact": "Contact",
-    "footer.copyright": "Copyright © 2021 Qingdao chinocojintian.com All rights reserved.",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "Qingdao Jintian Textile Co., Ltd. since 1998",
     "home.text": "Qingdao Jintian Textile Co., Ltd is located in the beautiful coastal city Qingdao, with comprehensive research and development center, a standardized showroom, and a modernized toy production base. Twenty years since its establishment, Qingdao Jintian Textile has always been committed to developing, producing, and selling plush toys, Christmas gifts and decorations, baby toys, textiles, and other related products, and received unanimous praise from customers across the world. Qingdao Jintian Textile is willing to take the development and production needs for OEM, ODM, OBM products, and we sincerely welcome customers from all over the world to negotiate corporate and benefit from mutual development.",
@@ -187,7 +187,7 @@ var TRANSLATIONS = {
     "footer.products": "产品",
     "footer.exhibitions": "展会",
     "footer.contact": "联系我们",
-    "footer.copyright": "版权所有 © 2021 青岛市 chinocojintian.com 保留所有权利。",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "青岛金田纺织有限公司,始于1998年",
     "home.text": "青岛金田纺织有限公司坐落于美丽的海滨城市青岛,拥有完善的研发中心、标准化展厅和现代化玩具生产基地。成立二十多年来,青岛金田纺织始终致力于毛绒玩具、圣诞礼品及装饰品、婴幼儿玩具、纺织品等相关产品的研发、生产与销售,获得了全球客户的一致好评。青岛金田纺织愿意承接OEM、ODM、OBM的开发生产需求,诚挚欢迎世界各地客户前来洽谈合作,实现互利共赢的发展。",
@@ -365,7 +365,7 @@ var TRANSLATIONS = {
     "footer.products": "Produkte",
     "footer.exhibitions": "Ausstellungen",
     "footer.contact": "Kontakt",
-    "footer.copyright": "Copyright © 2021 Qingdao chinocojintian.com Alle Rechte vorbehalten.",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "Qingdao Jintian Textile Co., Ltd. seit 1998",
     "home.text": "Die Qingdao Jintian Textile Co., Ltd. befindet sich in der wunderschönen Küstenstadt Qingdao und verfügt über ein umfassendes Forschungs- und Entwicklungszentrum, einen standardisierten Showroom sowie eine moderne Produktionsstätte für Spielwaren. Seit über zwanzig Jahren widmet sich Qingdao Jintian Textile der Entwicklung, Herstellung und dem Vertrieb von Plüschtieren, Weihnachtsgeschenken und -dekorationen, Babyspielzeug, Textilien und weiteren verwandten Produkten und wird von Kunden weltweit geschätzt. Qingdao Jintian Textile ist offen für OEM-, ODM- und OBM-Entwicklungs- und Produktionsaufträge und heißt Kunden aus aller Welt herzlich willkommen, um gemeinsame Geschäfte zu besprechen und von einer für beide Seiten vorteilhaften Zusammenarbeit zu profitieren.",
@@ -543,7 +543,7 @@ var TRANSLATIONS = {
     "footer.products": "Produits",
     "footer.exhibitions": "Salons",
     "footer.contact": "Contact",
-    "footer.copyright": "Copyright © 2021 Qingdao chinocojintian.com Tous droits réservés.",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "Qingdao Jintian Textile Co., Ltd. depuis 1998",
     "home.text": "Qingdao Jintian Textile Co., Ltd. est située dans la magnifique ville côtière de Qingdao et dispose d'un centre de recherche et développement complet, d'un showroom aux normes et d'une base de production de jouets modernisée. Depuis plus de vingt ans, Qingdao Jintian Textile s'engage dans le développement, la production et la vente de peluches, de cadeaux et décorations de Noël, de jouets pour bébés, de textiles et d'autres produits connexes, et a reçu l'approbation unanime de clients du monde entier. Qingdao Jintian Textile est disposée à répondre aux besoins de développement et de production OEM, ODM et OBM, et souhaite chaleureusement la bienvenue aux clients du monde entier pour négocier une collaboration et bénéficier d'un développement mutuellement avantageux.",
@@ -721,7 +721,7 @@ var TRANSLATIONS = {
     "footer.products": "製品",
     "footer.exhibitions": "展示会",
     "footer.contact": "お問い合わせ",
-    "footer.copyright": "Copyright © 2021 Qingdao chinocojintian.com 無断転載を禁じます。",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "青島金田紡績有限公司 1998年創業",
     "home.text": "青島金田紡績有限公司は、美しい沿海都市である青島に位置し、総合的な研究開発センター、標準化されたショールーム、そして近代的な玩具生産拠点を備えています。創業から20年以上にわたり、青島金田紡績はぬいぐるみ、クリスマスギフト・装飾品、ベビー玩具、繊維製品などの関連製品の開発・生産・販売に一貫して取り組み、世界中のお客様から高い評価をいただいております。青島金田紡績はOEM、ODM、OBMの開発・生産ニーズに幅広く対応しており、世界各地のお客様との商談を心より歓迎し、共に発展できる関係を築いてまいります。",
@@ -899,7 +899,7 @@ var TRANSLATIONS = {
     "footer.products": "Productos",
     "footer.exhibitions": "Ferias",
     "footer.contact": "Contacto",
-    "footer.copyright": "Copyright © 2021 Qingdao chinocojintian.com Todos los derechos reservados.",
+    "footer.copyright": "Copyright © 1998–2026 Qingdao Jintian Textile Co., Ltd. · Manufacturer & Exporter of Toy & Home Textile",
 
     "home.title": "Qingdao Jintian Textile Co., Ltd. desde 1998",
     "home.text": "Qingdao Jintian Textile Co., Ltd. está ubicada en la hermosa ciudad costera de Qingdao y cuenta con un completo centro de investigación y desarrollo, una sala de exposición estandarizada y una base de producción de juguetes modernizada. Desde hace más de veinte años, Qingdao Jintian Textile se ha dedicado al desarrollo, la producción y la venta de peluches, regalos y decoraciones navideñas, juguetes para bebés, textiles y otros productos relacionados, recibiendo el reconocimiento unánime de clientes de todo el mundo. Qingdao Jintian Textile está dispuesta a asumir necesidades de desarrollo y producción OEM, ODM y OBM, y da la más sincera bienvenida a los clientes de todo el mundo para negociar la cooperación y beneficiarse de un desarrollo mutuo.",
