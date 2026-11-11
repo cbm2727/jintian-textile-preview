@@ -1,14 +1,12 @@
 /* Products page: title + trust row, tabs and search (2026-11 design) */
 .prod-head {
-    border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
-    background: #FFFFFF;
 }
 .prod-head-in {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 110px;
+    justify-content: flex-end;
+    min-height: 84px;
 }
 .prod-head-in:before,
 .prod-head-in:after { display: none; }
@@ -23,7 +21,6 @@
 .prod-trust {
     display: flex;
     align-items: center;
-    margin-top: 22px;
 }
 .prod-trust li {
     display: flex;
@@ -36,6 +33,7 @@
     width: 30px;
     height: 30px;
     margin-right: 9px;
+    stroke: #004CA6;
 }
 .prod-trust b,
 .prod-trust span {
@@ -47,12 +45,12 @@
     font-weight: bold;
     font-size: 13px;
     line-height: 17px;
-    color: #222222;
+    color: #004CA6;
 }
 .prod-trust span {
     font-size: 12px;
     line-height: 16px;
-    color: #666666;
+    color: #4A78B8;
 }
 
 /* tabs */
@@ -138,16 +136,11 @@
 
 /* phones */
 @media screen and (max-width: 900px) {
-    .prod-head { border-top: 0; }
     .prod-head-in {
         display: block;
         min-height: 0;
         padding-top: 20px;
         padding-bottom: 16px;
-    }
-    .prod-head h1 {
-        font-size: 28px;
-        margin: 0 0 14px;
     }
     .prod-trust {
         display: grid;

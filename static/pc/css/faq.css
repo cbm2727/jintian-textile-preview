@@ -1,5 +1,10 @@
 /* FAQ page */
-.faq-body { margin: 40px 0 80px; }
+.faq-body {
+    margin-top: 40px;
+    padding-bottom: 120px;
+    background: url(../images/bg/001.jpg) no-repeat center bottom;
+    background-size: 100% auto;
+}
 .faq-body .container { width: 1030px; max-width: 100%; box-sizing: border-box; }
 
 /* Catalog request box */
@@ -74,7 +79,7 @@
     font-size: 13px; padding: 8px 12px; border-radius: 4px; opacity: .9; }
 
 @media (max-width: 900px) {
-    .faq-body { margin: 24px 0 48px; }
+    .faq-body { margin-top: 24px; padding-bottom: 60px; }
     .catalog-box { padding: 22px 18px 16px; margin-bottom: 32px; }
     .catalog-box h2 { font-size: 20px; }
     .catalog-row { flex-direction: column; }

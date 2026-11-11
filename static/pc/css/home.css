@@ -213,3 +213,36 @@
 }
 .about-intro .ai-links a span { color: #B00022; font-size: 17px; }
 .about-intro .ai-links a:hover span { text-decoration: underline; }
+
+/* page-bottom theme background, same series as the other pages */
+.home-body {
+    background: url(../images/bg/003.jpg) no-repeat center bottom;
+    background-size: 100% auto;
+    padding-bottom: 120px;
+}
+
+/* keep logo left, company text right on narrower desktop windows */
+@media screen and (min-width: 901px) {
+    .home-about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .home-about::after,
+    .home-about .clear { display: none; }
+    .home-about .thumb {
+        float: none;
+        flex: 0 0 auto;
+        width: clamp(260px, 36%, 421px);
+        height: auto;
+        margin-right: clamp(28px, 4.5%, 52px);
+    }
+    .home-about .thumb img { height: auto; }
+    .home-about .content {
+        float: none;
+        flex: 1 1 0;
+        min-width: 0;
+    }
+    .home-about .about-intro { width: auto; max-width: 615px; }
+    .home-about .adsense { flex: 0 0 100%; }
+}
