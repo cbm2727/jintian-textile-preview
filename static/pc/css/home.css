@@ -157,3 +157,59 @@
     margin: 20px auto 0;
     object-fit: cover;
 }
+
+/* home intro (2026-11 design) */
+.about-intro { width: 615px; }
+.about-intro .ai-name,
+.about-intro .ai-since span,
+.about-intro .ai-text,
+.about-intro .ai-links a,
+.about-intro .ai-links a span {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.about-intro .ai-name {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    color: #004CA6;
+}
+.about-intro .ai-since {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 16px;
+}
+.about-intro .ai-since span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+}
+.about-intro .ai-since .ai-line {
+    display: inline-block;
+    width: 124px;
+    height: 4px;
+    background: #004CA6;
+    margin-right: 22px;
+}
+.about-intro .ai-h1 {
+    font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    color: #333;
+    margin-bottom: 14px;
+}
+.about-intro .ai-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    margin-bottom: 12px;
+}
+.about-intro .ai-links { margin: 20px 0 14px; }
+.about-intro .ai-links a {
+    font-size: 17px;
+    color: #B00022;
+    margin-right: 66px;
+}
+.about-intro .ai-links a span { color: #B00022; font-size: 17px; }
+.about-intro .ai-links a:hover span { text-decoration: underline; }

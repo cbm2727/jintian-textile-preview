@@ -485,3 +485,11 @@
 @media (min-width: 901px) and (max-width: 1199px) {
     .navbar ul li a { width: auto; padding: 0 12px; margin-left: 4px; }
 }
+
+@media screen and (max-width: 900px) {
+    .about-intro { width: auto; }
+    .about-intro .ai-name { font-size: 22px; line-height: 30px; }
+    .about-intro .ai-line { width: 60px; }
+    .about-intro .ai-h1 { font-size: 18px; line-height: 26px; }
+    .about-intro .ai-links a { display: inline-block; margin: 0 24px 8px 0; }
+}
