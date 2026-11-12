@@ -504,5 +504,18 @@
 
 /* phones: show the whole cotton composition (scaled down, never enlarged), white at the top edge */
 @media screen and (max-width: 900px) {
-    .home-lower { background-image: url(../images/bg/cotton-home-mobile.jpg); background-size: cover; background-position: center top; }
+    /* the cotton starts at the second-to-last line of the Baby Textiles text (top set by script) */
+    .home-lower { background: none; position: relative; z-index: 0; }
+    .home-lower::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: var(--cotton-top, 45%);
+        z-index: -1;
+        background: url(../images/bg/cotton-home-mobile.jpg?v=2) no-repeat center top / cover;
+        opacity: 0.85;   /* phone strength */
+        pointer-events: none;
+    }
 }

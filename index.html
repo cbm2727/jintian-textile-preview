@@ -62,7 +62,7 @@ try { var cc = localStorage.getItem('cookie_consent'); if (cc) gtag('consent', '
   }]
 }
 </script>
-<link rel='stylesheet' type='text/css' href='static/pc/css/mobile.css?v=20261115'>
+<link rel='stylesheet' type='text/css' href='static/pc/css/mobile.css?v=20261119'>
 <link rel='stylesheet' type='text/css' href='static/pc/css/consent.css?v=2'>
 </head>
 <body>
@@ -239,6 +239,24 @@ try { var cc = localStorage.getItem('cookie_consent'); if (cc) gtag('consent', '
         }
 
     })
+</script>
+<script>
+/* phones: begin the cotton background at the second-to-last line of the Baby Textiles text */
+(function () {
+    function place() {
+        var low = document.querySelector('.home-lower'), ps = document.querySelectorAll('.hbt-copy p');
+        if (!low || !ps.length) return;
+        if (window.innerWidth > 900) { low.style.removeProperty('--cotton-top'); return; }
+        var p = ps[ps.length - 1], lh = parseFloat(getComputedStyle(p).lineHeight) || 26;
+        var top = p.getBoundingClientRect().bottom - 2 * lh - low.getBoundingClientRect().top;
+        low.style.setProperty('--cotton-top', Math.max(0, Math.round(top)) + 'px');
+    }
+    window.addEventListener('load', place);
+    window.addEventListener('resize', place);
+    document.addEventListener('DOMContentLoaded', place);
+    setTimeout(place, 800);
+    document.addEventListener('change', function (e) { if (e.target && e.target.id === 'langSelect') setTimeout(place, 60); });
+})();
 </script>
 <script src="static/pc/js/consent.js?v=2"></script>
 </body>
