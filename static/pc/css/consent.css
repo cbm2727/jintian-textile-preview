@@ -1,0 +1,57 @@
+/* Cookie notice — same look as the site's catalog box (soft pink, red edge) */
+.cookie-bar {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 10000;
+    width: 380px;
+    box-sizing: border-box;
+    padding: 18px 20px 16px;
+    background: #FBF4F3;
+    border-left: 5px solid #A32015;
+    border-radius: 4px;
+    box-shadow: 0 8px 28px rgba(83, 63, 36, 0.16);
+    font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    animation: cookieIn .35s ease-out;
+}
+@keyframes cookieIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.cookie-bar .cookie-title {
+    display: block;
+    margin-bottom: 6px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #004CA6;
+}
+html[lang="zh"] .cookie-bar .cookie-title,
+html[lang="ja"] .cookie-bar .cookie-title { font-family: 'PingFang SC', 'Hiragino Sans', sans-serif; }
+.cookie-bar p {
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #564D4D;
+}
+.cookie-btns { display: flex; justify-content: flex-end; gap: 10px; }
+.cookie-btns button {
+    padding: 0 18px;
+    line-height: 34px;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid #C9BFB8;
+    background: #FFFFFF;
+    color: #3E3E3E;
+}
+.cookie-btns button:hover { border-color: #A32015; color: #A32015; }
+.cookie-btns .cookie-yes {
+    border-color: #A32015;
+    background: #A32015;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.cookie-btns .cookie-yes:hover { background: #8A1B12; color: #FFFFFF; }
+@media screen and (max-width: 900px) {
+    /* phones: full width, sitting just above the red Contact button */
+    .cookie-bar { left: 12px; right: 12px; bottom: 76px; width: auto; }
+    .cookie-btns button { flex: 1; line-height: 38px; }
+}
