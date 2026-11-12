@@ -33,7 +33,7 @@ try { var cc = localStorage.getItem('cookie_consent'); if (cc) gtag('consent', '
 <script src='../static/pc/js/jquery.min.js'></script>
 <script src="../static/pc/js/iconfont.js"></script>
 <script src="../static/pc/js/swiper.min.js"></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='../static/pc/css/home.css?v=20261127'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/pc/css/home.css?v=20261129'>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -245,7 +245,15 @@ try { var cc = localStorage.getItem('cookie_consent'); if (cc) gtag('consent', '
     function place() {
         var low = document.querySelector('.home-lower'), ps = document.querySelectorAll('.hbt-copy p');
         if (!low || !ps.length) return;
-        if (window.innerWidth > 900) { low.style.removeProperty('--cotton-top'); return; }
+        if (window.innerWidth > 900) {
+            low.style.removeProperty('--cotton-top');
+            var pair = document.querySelector('.hbt-pair');
+            if (pair) {
+                var r = pair.getBoundingClientRect();
+                low.style.setProperty('--cotton-y', Math.round(r.top + r.height / 2 - low.getBoundingClientRect().top) + 'px');
+            }
+            return;
+        }
         var p = ps[ps.length - 1], lh = parseFloat(getComputedStyle(p).lineHeight) || 26;
         var top = p.getBoundingClientRect().bottom - 2 * lh - low.getBoundingClientRect().top;
         low.style.setProperty('--cotton-top', Math.max(0, Math.round(top)) + 'px');
