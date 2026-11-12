@@ -217,7 +217,7 @@
 /* page-bottom theme background, same series as the other pages */
 .home-lower {
     /* right edge; the top of the cotton sits at the middle of the two mat photos (set by script) */
-    background: url(../images/bg/cotton-home.jpg?v=9) no-repeat right 0 top var(--cotton-y, 265px);
+    background: url(../images/bg/cotton-home-desktop.jpg?v=1) no-repeat right 0 top var(--cotton-y, 265px);
     background-size: auto;
     padding-bottom: 72px;
 }
