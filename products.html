@@ -19,7 +19,7 @@
 <script src="static/pc/js/swiper.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='static/pc/css/style.css'>
 <link rel='stylesheet' type='text/css' href='static/pc/css/mobile.css'>
-<link rel='stylesheet' type='text/css' href='static/pc/css/products-head.css?v=8'>
+<link rel='stylesheet' type='text/css' href='static/pc/css/products-head.css?v=9'>
 </head>
 <body>
 <!-- header -->
@@ -92,7 +92,7 @@
                                 Baby Products                            </a>
                         </li>
                                             <li>
-                            <a href="javascript:void(0)" data-cat="babytextiles" data-i18n="products.catBabyTextiles">
+                            <a href="baby-textiles.html" data-cat="babytextiles" data-i18n="products.catBabyTextiles">
                                 Baby Textiles                            </a>
                         </li>
                                 </ul>
@@ -284,60 +284,6 @@
                             <div class="title multiline-text" data-i18n="products.item42">Lovely Fox Toy for Kids</div>
                         </a>
                     </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811190852_76606.jpg" alt="3pc Towel Set & Nappy Bag & Mommy Bag - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item19">3pc Towel Set & Nappy Bag & Mommy Bag</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811175435_56361.jpg" alt="4pcs Baby Bedding Set Beige - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item20">4pcs Baby Bedding Set Beige</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811181133_89124.jpg" alt="4pcs Baby Bedding Set Blue - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item21">4pcs Baby Bedding Set Blue</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811184235_90720.jpg" alt="Baby Armchair & Bassinet Bedding & Baby Travel - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item43">Baby Armchair & Bassinet Bedding & Baby Travel</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811184234_35498.jpg" alt="Baby Bedding Set Beige - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item44">Baby Bedding Set Beige</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811181133_90722.jpg" alt="Baby Bedding Set Blue - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item45">Baby Bedding Set Blue</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811184234_73998.jpg" alt="Cushion & Pillow & Baby Bib & Sleeping Bag & Sleeping Bag with Sleeves - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item46">Cushion & Pillow & Baby Bib & Sleeping Bag & Sleeping Bag with Sleeves</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811181132_24005.jpg" alt="Mommy Bag & Baby Sleeping Bag & Wall Hanger - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item47">Mommy Bag & Baby Sleeping Bag & Wall Hanger</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-item-cat="babytextiles">
-                            <div class="thumb"><img src="upload/images/20210811/20210811184235_96626.jpg" alt="7pcs Baby Bedding Set - plush toy manufacturer China" loading="lazy"></div>
-                            <div class="title multiline-text" data-i18n="products.item48">7pcs Baby Bedding Set</div>
-                        </a>
-                    </li>
                         </ul>
         <div id="noResults" class="capital" style="display:none; padding: 40px 0; text-align:center; color:#888888;" data-i18n="products.noResults">No products in this category yet — more will be added soon.</div>
         <div id="pagination" class="paginations"></div>
@@ -362,7 +308,7 @@
 <!-- footer end -->
 <script src="static/pc/layui/layui.js"></script>
 <script src='static/pc/js/web.js'></script>
-<script src="static/pc/js/i18n.js?v=20261111"></script>
+<script src="static/pc/js/i18n.js?v=20261112"></script>
 <script>
     layui.use(['laypage'], function () {
         var laypage = layui.laypage;
@@ -370,8 +316,8 @@
             elem: 'pagination',
             prev: '<em>‹</em>',
             next: '<em>›</em>',
-            count: 39,
-            limit: 39,
+            count: 30,
+            limit: 30,
             curr: 1
         });
     })
@@ -387,7 +333,9 @@
         $('#noResults').toggle(visible === 0);
     }
 
-    $('.category a').click(function () {
+    $('.category a').click(function (e) {
+        if ($(this).data('cat') === 'babytextiles') return;   // opens baby-textiles.html
+        e.preventDefault();
         $('.product-body .search input').val('');
         $('.category a').removeClass('active');
         $(this).addClass('active');
@@ -409,7 +357,24 @@
     $('.product-body .search form').on('submit', function (e) { e.preventDefault(); searchProducts($(this).find('input').val()); });
     $('.product-body .search button').on('click', function () { searchProducts($('.product-body .search input').val()); });
 
+    // old links to the Baby Textiles tab now go to its own page
+    if (location.hash === '#baby-textiles' || location.hash === '#bt-custom') {
+        location.replace('baby-textiles.html' + (location.hash === '#bt-custom' ? '#bt-custom' : ''));
+    }
+    // products.html#plush etc. open that category; products.html?q=... runs a search
+    var hashCat = location.hash.replace('#', '');
+    if (hashCat && $('.category a[data-cat="' + hashCat + '"]').length && hashCat !== 'babytextiles') {
+        $('.category a').removeClass('active');
+        var act = $('.category a[data-cat="' + hashCat + '"]').addClass('active')[0], ul = $('.category')[0];
+        if (ul && act) ul.scrollLeft = act.parentNode.offsetLeft - 16;
+    }
     filterByCategory($('.category a.active').data('cat'));
+    var qm = location.search.match(/[?&]q=([^&]*)/);
+    if (qm) {
+        var qv = decodeURIComponent(qm[1].replace(/\+/g, ' '));
+        $('.product-body .search input').val(qv);
+        searchProducts(qv);
+    }
 </script>
 </body>
 </html>

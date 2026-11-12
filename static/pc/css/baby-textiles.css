@@ -1,0 +1,159 @@
+/* Baby Textiles tab on products.html — content in the site's own style */
+.bt-panel {
+    padding: 8px 0 40px;
+    font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    color: #564D4D;
+}
+.bt-panel figure { margin: 0; }
+.bt-panel img { display: block; width: 100%; height: auto; }
+.bt-panel p {
+    font-size: 15px;
+    line-height: 26px;
+    color: #564D4D;
+    margin: 0 0 18px;
+    max-width: 52ch;
+}
+.bt-panel .bt-eyebrow {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #A32015;
+    margin-bottom: 12px;
+}
+.bt-panel h1,
+.bt-panel h2,
+.bt-panel h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    color: #004CA6;
+    margin: 0 0 16px;
+    line-height: 1.15;
+}
+.bt-panel .bt-h-xl { font-size: 46px; }
+.bt-panel .bt-h-lg { font-size: 32px; }
+.bt-panel figcaption {
+    font-size: 13px;
+    line-height: 20px;
+    color: #8A8080;
+    margin-top: 10px;
+}
+.bt-panel figcaption strong {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    line-height: 30px;
+    color: #004CA6;
+    margin-bottom: 2px;
+}
+.bt-btn {
+    display: inline-block;
+    padding: 0 22px;
+    line-height: 42px;
+    border-radius: 3px;
+    background: #A32015;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+}
+.bt-btn:hover { background: #8A1B12; }
+
+/* CHINOCO mark on the photos */
+.bt-photo { position: relative; }
+.bt-photo::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 22%;
+    max-width: 114px;
+    aspect-ratio: 228 / 41;
+    background: url(../images/babytextiles/chinoco-mark.png) center / contain no-repeat;
+    pointer-events: none;
+}
+
+/* sections */
+.bt-hero,
+.bt-feature,
+.bt-paired {
+    display: grid;
+    align-items: center;
+    gap: 60px;
+}
+.bt-hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 0;
+    background: #F4EFE8;
+    padding: 44px;
+}
+.bt-panel .bt-logo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    width: 260px;
+    height: auto;
+}
+.bt-hero .bt-copy { grid-column: 1; grid-row: 2; align-self: center; padding: 40px 0; }
+.bt-hero figure { grid-column: 2; grid-row: 1 / span 2; }
+.bt-hero figure img { aspect-ratio: 1086 / 1448; }
+.bt-feature {
+    grid-template-columns: 1.25fr .75fr;
+    margin: 90px 0;
+}
+.bt-intro {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+.bt-intro p { margin-left: auto; margin-right: auto; }
+.bt-paired {
+    grid-template-columns: 1fr .65fr;
+    align-items: start;
+    margin-bottom: 80px;
+}
+.bt-paired figure:nth-child(2) { margin-top: 110px; }
+.bt-ending {
+    background: #F4EFE8;
+    padding: 56px;
+}
+.bt-ending p { max-width: 70ch; }
+
+@media screen and (max-width: 1199px) {
+    .bt-hero, .bt-feature, .bt-paired { gap: 36px; }
+    .bt-panel .bt-h-xl { font-size: 38px; }
+    .bt-panel .bt-h-lg { font-size: 28px; }
+}
+@media screen and (max-width: 900px) {
+    .bt-panel { padding-top: 0; }
+    .bt-hero, .bt-feature, .bt-paired {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .bt-hero { padding: 24px 18px; }
+    .bt-panel .bt-logo { width: 200px; margin-bottom: 8px; }
+    .bt-hero .bt-logo, .bt-hero .bt-copy, .bt-hero figure { grid-column: 1; grid-row: auto; }
+    .bt-hero .bt-copy { padding: 0; }
+    .bt-feature { margin: 48px 0; }
+    .bt-feature figure { order: 2; }
+    .bt-paired { margin-bottom: 48px; }
+    .bt-paired figure:nth-child(2) { margin-top: 0; }
+    .bt-ending { padding: 28px 18px; }
+    .bt-panel .bt-h-xl { font-size: 32px; }
+    .bt-panel .bt-h-lg { font-size: 24px; }
+    .bt-panel p { font-size: 14px; line-height: 24px; }
+    .bt-intro { text-align: left; }
+}
+
+/* Chinese / Japanese: sans font for headings */
+html[lang="zh"] .bt-panel h1, html[lang="zh"] .bt-panel h2, html[lang="zh"] .bt-panel h3, html[lang="zh"] .bt-panel figcaption strong,
+html[lang="ja"] .bt-panel h1, html[lang="ja"] .bt-panel h2, html[lang="ja"] .bt-panel h3, html[lang="ja"] .bt-panel figcaption strong {
+    font-family: 'PingFang SC', 'Hiragino Sans', 'Microsoft YaHei', sans-serif;
+}
+
+/* Baby Textiles tab: its own cotton background, reaching further up the page */
+.product-body.bt-on {
+    background: url(../images/bg/cotton-babytextiles.jpg) no-repeat center bottom;
+    background-size: auto;
+    padding-bottom: 90px;
+}

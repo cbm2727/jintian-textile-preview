@@ -12,7 +12,7 @@
     /*height: 450px;*/
     height: 420px;
     padding: 39px 0;
-    background: url(../images/home/bg001.jpg) no-repeat center;
+    background: url(../images/home/bg001.jpg?v=orig) no-repeat center;
     background-size: cover;
     margin-bottom: 57px;
     position: relative;
@@ -106,7 +106,7 @@
 }
 
 .home-about {
-    margin-bottom: 70px;
+    margin-bottom: 16px;
 }
 .home-about .thumb {
     width: 421px;
@@ -215,10 +215,17 @@
 .about-intro .ai-links a:hover span { text-decoration: underline; }
 
 /* page-bottom theme background, same series as the other pages */
-.home-body {
-    background: url(../images/bg/003.jpg) no-repeat center bottom;
-    background-size: 100% auto;
-    padding-bottom: 120px;
+.home-lower {
+    background: url(../images/bg/cotton-home.jpg?v=9) no-repeat center bottom;
+    background-size: auto;
+    padding-bottom: 72px;
+}
+.home-lower .adsense img {
+    width: 820px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 /* keep logo left, company text right on narrower desktop windows */
@@ -248,7 +255,7 @@
 }
 
 /* crocodile strip: let the theme background show through the white photo background */
-.home-about .adsense img { mix-blend-mode: multiply; }
+.adsense img { mix-blend-mode: multiply; }
 
 /* Chinese / Japanese: use the site's sans font instead of the Latin serif */
 html[lang="zh"] .about-intro .ai-name,
@@ -265,3 +272,62 @@ html[lang="ja"] .about-intro .ai-links a span {
 }
 html[lang="zh"] .about-intro .ai-text,
 html[lang="ja"] .about-intro .ai-text { font-size: 15px; line-height: 26px; }
+
+/* Original Baby Textiles (home) */
+.hbt {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 0 auto 6px;
+    padding: 27px 0 62px;
+}
+.hbt-pair {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(6px, 1.4vw, 14px);
+}
+.hbt-photo { position: relative; min-width: 0; }
+.hbt-photo::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 21%;
+    max-width: 114px;
+    aspect-ratio: 228 / 41;
+    background: url(../images/babytextiles/chinoco-mark.png) center / contain no-repeat;
+    pointer-events: none;
+}
+.hbt-pair img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+}
+.hbt-copy {
+    text-align: left;
+    max-width: 720px;
+    margin: 24px 0 0;
+}
+.hbt-copy h2 {
+    font: 600 clamp(27px, 4vw, 38px)/1.15 Georgia, 'Times New Roman', serif;
+    color: #244B73;
+    margin: 0 0 10px;
+}
+.hbt-copy p {
+    font: 16px/1.6 Georgia, 'Times New Roman', serif;
+    color: #413B35;
+    margin: 0 0 10px;
+}
+.hbt-copy a,
+.hbt-copy a span {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #982C22;
+}
+.hbt-copy a:hover span { text-decoration: underline; }
+html[lang="zh"] .hbt-copy h2, html[lang="zh"] .hbt-copy p, html[lang="zh"] .hbt-copy a, html[lang="zh"] .hbt-copy a span,
+html[lang="ja"] .hbt-copy h2, html[lang="ja"] .hbt-copy p, html[lang="ja"] .hbt-copy a, html[lang="ja"] .hbt-copy a span {
+    font-family: 'PingFang SC', 'Hiragino Sans', 'Microsoft YaHei', sans-serif;
+}
