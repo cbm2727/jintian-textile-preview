@@ -504,5 +504,5 @@
 
 /* phones: show the whole cotton composition (scaled down, never enlarged), white at the top edge */
 @media screen and (max-width: 900px) {
-    .home-lower { background-size: cover; background-position: center top; }
+    .home-lower { background-image: url(../images/bg/cotton-home-mobile.jpg); background-size: cover; background-position: center top; }
 }
