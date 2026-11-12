@@ -514,7 +514,7 @@
         bottom: 0;
         top: var(--cotton-top, 45%);
         z-index: -1;
-        background: url(../images/bg/cotton-home-mobile.jpg?v=2) no-repeat center top / cover;
+        background: url(../images/bg/cotton-home.jpg?v=9) no-repeat center top / cover;
         opacity: 0.85;   /* phone strength */
         pointer-events: none;
     }
