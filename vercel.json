@@ -1,14 +1,59 @@
 {
   "redirects": [
-    { "source": "/product-:id(\\d+).html", "destination": "/products.html", "permanent": true },
-    { "source": "/index/about", "destination": "/about.html", "permanent": true },
-    { "source": "/index/contact", "destination": "/contact.html", "permanent": true },
-    { "source": "/index/exhibitions", "destination": "/exhibitions.html", "permanent": true },
-    { "source": "/index/exhibitions/:path*", "destination": "/exhibitions.html", "permanent": true },
-    { "source": "/index/products", "destination": "/products.html", "permanent": true },
-    { "source": "/index/products/:path*", "destination": "/products.html", "permanent": true },
-    { "source": "/index/index", "destination": "/", "permanent": true },
-    { "source": "/index", "destination": "/", "permanent": true },
-    { "source": "/index/:path*", "destination": "/", "permanent": true }
+    {
+      "source": "/:lang(de|fr|es)",
+      "destination": "/:lang/",
+      "permanent": true
+    },
+    {
+      "source": "/product-:id(\\d+).html",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/exhibitions",
+      "destination": "/exhibitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/exhibitions/:path*",
+      "destination": "/exhibitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/products",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/products/:path*",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/index/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index/:path*",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

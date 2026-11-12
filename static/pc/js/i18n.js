@@ -1354,17 +1354,46 @@ var TRANSLATIONS = {
     document.documentElement.setAttribute("lang", lang);
   }
 
+  // de / fr / es have their own addresses (/de/, /fr/, /es/); en is the root; zh / ja switch on the page.
+  var PATH_LANGS = { de: 1, fr: 1, es: 1 };
+
+  function pathLang() {
+    var m = location.pathname.match(/^\/(de|fr|es)(\/|$)/);
+    return m ? m[1] : null;
+  }
+
+  function pageFile() {
+    var f = location.pathname.replace(/^\/(de|fr|es)(?=\/|$)/, "").split("/").pop();
+    return (!f || f === "index.html") ? "" : f;
+  }
+
+  function urlFor(lang) {
+    return (PATH_LANGS[lang] ? "/" + lang + "/" : "/") + pageFile() + location.search + location.hash;
+  }
+
   function init() {
-    var lang = getLang();
+    var pl = pathLang();
+    var lang = pl || getLang();
+    if (pl) {
+      setLang(pl);
+    } else if (PATH_LANGS[lang]) {
+      location.replace(urlFor(lang));
+      return;
+    }
     var select = document.getElementById("langSelect");
     if (select) {
       select.value = lang;
       select.addEventListener("change", function () {
-        setLang(this.value);
-        applyLang(this.value);
+        var v = this.value;
+        setLang(v);
+        if (PATH_LANGS[v] || pl) {
+          location.href = urlFor(v);
+        } else {
+          applyLang(v);
+        }
       });
     }
-    applyLang(lang);
+    if (!pl) applyLang(lang);
   }
 
   if (document.readyState === "loading") {
