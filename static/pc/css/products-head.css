@@ -171,22 +171,22 @@
         padding-top: 4px;
         margin-bottom: 16px;
     }
+    /* all categories visible at once: wrap onto two rows */
     .product-body .category {
         display: flex;
-        overflow-x: auto;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 2px;
         white-space: nowrap;
         margin: 0 0 12px;
+        padding-bottom: 4px;
         border-bottom: 1px solid #E3E3E3;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
     }
-    .product-body .category::-webkit-scrollbar { display: none; }
-    .product-body .category li { flex: none; margin: 0 18px 0 0; }
-    .product-body .category li:last-child { margin-right: 0; }
+    .product-body .category li { flex: none; margin: 0; }
     .product-body .category li a,
     .product-body .category li a.active {
         font-size: 15px;
-        line-height: 42px;
+        line-height: 38px;
         padding: 0 2px;
         background: none;
         border-radius: 0;
